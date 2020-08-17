@@ -1,0 +1,33 @@
+<!doctype html>
+{{ with .Site.LanguageCode }}<html lang="{{ . }}">{{ else }}<html>{{ end }}
+<head>
+<meta charset="utf-8">
+{{ "<!-- Google Tag Manager -->" | safeHTML }}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RZX8R');</script>
+{{ "<!-- End Google Tag Manager -->" | safeHTML }}
+{{ if .IsHome }}
+<title>{{ .Site.Title }}</title>
+{{ else }}
+<title>{{ with .Data.Plural }}{{ . }} :: {{ end }}{{ with .Title }}{{ . | safeHTML }} :: {{ end }}{{ .Site.Title }}</title>
+{{ end }}
+<meta name="description" content="{{ with .Params.excerpt }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="viewport" content="width=device-width">
+<link rel="author" href="{{ .Site.Author.url }}">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/images/icon/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="/assets/images/icon/apple-touch-icon-precomposed.png">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{{ .Site.Params.feed }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ partial "ogp.html" . }}
+{{ partial "styles.html" . }}
+</head>
+<body role="document">
+{{ "<!-- Google Tag Manager (noscript) -->" | safeHTML }}
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RZX8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{{ "<!-- End Google Tag Manager (noscript) -->" | safeHTML }}

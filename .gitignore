@@ -1,0 +1,7 @@
+*~
+/node_modules
+/static/assets
+/resources
+/.sass-cache
+/.cache
+.DS_Store

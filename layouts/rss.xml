@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ .Site.Title }}</title>
+  <link>{{ .Permalink }}</link>
+  {{ with .Site.LanguageCode }}<language>{{ . }}</language>{{ end }}
+  {{ with .Site.Author.name }}<author>{{ . }}</author>{{ end }}
+  <description>{{ .Site.Params.description }}</description>
+  <generator uri="https://gohugo.io">Hugo</generator>
+  <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
+  {{ range first 15 .Site.RegularPages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+      {{ with .Site.Author.name }}<author>{{ . }}</author>{{ end }}
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ "<![CDATA[" | safeHTML }}{{ with .Params.eyecatch }}<figure><img class="Lazy" src="/assets/images/eyecatch.png" data-original="{{ . }}" alt="" itemprop="image"></figure>{{ end }}{{ .Content }}{{ "]]>" | safeHTML }}</description>
+    </item>
+  {{ end }}
+</channel>
+</rss>

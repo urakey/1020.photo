@@ -1,0 +1,57 @@
+//==============================================================================
+//  Module: Header
+//==============================================================================
+
+.header {
+  @include wrapper;
+  @include linkColor($base-color, true, false);
+
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  @include respondTo(small) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+.header__id {
+  margin: 0 0 $mlv5;
+
+  a {
+    margin: 0 auto;
+    display: block;
+    width: 170px;
+    height: 96px;
+    border: 0;
+    text-indent: -7777px;
+    background-image: url($base-image + "/svg/logo.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include respondTo(small) {
+      width: 114px;
+      height: 64px;
+    }
+  }
+}
+
+.header__description {
+  @include fontSize(12);
+  @include linkColor($key-color-2-l, true, true);
+
+  margin: 0;
+  letter-spacing: .1em;
+  color: $key-color-2-l;
+
+  &::before {
+    content: " -> ";
+  }
+
+  &::after {
+    content: " <- ";
+  }
+}

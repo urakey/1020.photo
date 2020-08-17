@@ -1,0 +1,58 @@
+//==============================================================================
+//  Module: Main
+//==============================================================================
+
+.main {
+  @include linkColor($base-link-color, true, false);
+  @extend %clearfix;
+
+  width: $content-width;
+
+  @include respondTo(large) {
+    width: 100%;
+  }
+}
+
+.main__title {
+  @extend %title;
+
+  margin: 0 0 $mlv4;
+
+  @include respondTo(medium) {
+    text-align: center;
+  }
+}
+
+.main__pagination {
+  @include linkColor($base-link-color, false, true);
+  text-align: center;
+}
+
+.main__pagination--prev {
+  display: inline-block;
+  color: $key-color-2;
+
+  a::before,
+  span::before {
+    @extend %icon;
+
+    content: "\f100";
+  }
+}
+
+.main__pagination--next {
+  display: inline-block;
+  color: $key-color-2;
+
+  a::after,
+  span::after {
+    @extend %icon;
+
+    content: "\f101";
+  }
+}
+
+.main__pagination--number {
+  display: inline-block;
+  margin: 0 2rem;
+}

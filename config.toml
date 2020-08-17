@@ -1,0 +1,20 @@
+Baseurl          = 'https://1020.photo'
+LegalanguageCode = 'ja-JP'
+Title            = '[1020]'
+Publishdir       = 'docs'
+Paginate         = 30
+
+[Author]
+name = 'Aki Fukayama [akey]'
+url  = 'https://chocolateboard.net/about/'
+
+[Params]
+description = 'Photograph by Aki Fukayama [akey].'
+feed        = '/feed.rss'
+twitter     = 'https://twitter.com/urakey'
+facebook    = 'https://www.facebook.com/urakey'
+instagram   = 'https://www.instagram.com/akey'
+pinterest   = 'https://pinterest.com/urakey'
+lastfm      = 'https://www.last.fm/ja/user/urakey'
+github      = 'https://github.com/urakey'
+archives    = ['2020', '2019']

@@ -1,0 +1,36 @@
+//==============================================================================
+//  Variables
+//==============================================================================
+
+// Base Colors
+$key-color-1: #9effe9;
+$key-color-2: #121212;
+
+$key-color-2-l:    #565656;
+$key-color-2-ll:   #a7a7a7;
+$key-color-2-lll:  #e7e7e7;
+$key-color-2-llll: #fefefe;
+
+// Content Base Setting
+$base-image: "/assets/images";
+$base-font: Voltaire, "游明朝体", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif;
+
+$base-background:         $key-color-2-llll;
+$base-color:              $key-color-2;
+$base-link-color:         $key-color-2;
+$base-link-color-visited: $key-color-2;
+
+$content-width:      1200px;
+$content-width-main: 640px;
+$content-width-sub:  300px;
+
+$break-large:  1260px;
+$break-medium: 700px;
+$break-small:  480px;
+
+// Other
+$mlv1: 5rem;
+$mlv2: 4rem;
+$mlv3: 3rem;
+$mlv4: 2rem;
+$mlv5: 1rem;

@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main class="main" role="main">
+  <ul class="articleList">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "!=" "page") }}
+    {{ range $paginator.Pages }}
+      <li class="articleList__item">
+        {{ .Render "summary" }}
+      </li>
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</main>
+
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}
+{{ partial "tail.html" . }}

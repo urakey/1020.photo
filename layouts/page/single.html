@@ -1,0 +1,14 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main class="main" role="main">
+  <section class="article" itemscope itemtype="https://schema.org/Article">
+    <h1 class="main__title">{{ .Title | safeHTML }}</h1>
+    <div class="article__body" itemprop="articleBody">
+      {{ .Content }}
+    </div>
+  </section>
+</main>
+
+{{ partial "footer.html" . }}
+{{ partial "tail.html" . }}

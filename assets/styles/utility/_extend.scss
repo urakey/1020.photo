@@ -1,0 +1,76 @@
+//==============================================================================
+//  Utility: Extends
+//==============================================================================
+%resetlist {
+  padding: 0;
+  list-style: none;
+}
+
+%clearfix {
+  @include clearfix;
+}
+
+%sprite {
+  display: block;
+  overflow: hidden;
+  text-indent: -7777px;
+}
+
+%radius {
+  border-radius: 2px;
+}
+
+%title {
+  @include fontSize(13);
+
+  font-weight: normal;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+%image-fit {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+%notice {
+  @include fontSize(12);
+
+  font-size: .8em;
+  color: $key-color-2-l;
+}
+
+%btn {
+  @extend %radius;
+
+  display: inline-block;
+  padding: 10px 40px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background: $key-color-1;
+  box-sizing: border-box;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    color: white;
+    opacity: .7;
+    transition-duration: .5s;
+    transition-property: opacity;
+  }
+}
+
+%icon {
+  display: inline-block;
+  width: 1em;
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,47 @@
+//==============================================================================
+//  Module: Side
+//==============================================================================
+
+.sidebar {
+  @include linkColor($base-link-color, true, false);
+
+  width: $content-width;
+
+  @include respondTo(large) {
+    width: 100%;
+  }
+
+  aside,
+  nav {
+    @include fontSize(14);
+  }
+}
+
+.sidebar__title {
+  @extend %title;
+
+  margin: 0 0 $mlv4;
+
+  @include respondTo(medium) {
+    margin: $mlv2 0 $mlv4;
+    text-align: center;
+  }
+}
+
+.sidebar__list {
+  @include fontSize(32);
+  @extend %resetlist;
+  margin: 0;
+
+  @include respondTo(medium) {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+
+    & + li {
+      margin-left: $mlv5
+    }
+  }
+}

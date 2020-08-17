@@ -1,0 +1,38 @@
+{
+  "name": "1020.photo",
+  "version": "1.0.0",
+  "description": "Web site.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "del": "^5.1.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-jpegoptim": "^6.0.0",
+    "jquery": "^3.4.1",
+    "jquery_lazyload": "^1.9.3",
+    "normalize.css": "^8.0.1",
+    "three": "^0.108.0",
+    "through2": "^3.0.1"
+  },
+  "scripts": {
+    "start": "gulp init && hugo server --watch & gulp watch",
+    "build": "gulp init && gulp build && hugo && gulp format:html && gulp format:rss && gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:urakey/1020.photo.git"
+  },
+  "author": "akey",
+  "license": "ISC"
+}

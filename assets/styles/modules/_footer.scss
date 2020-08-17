@@ -1,0 +1,91 @@
+//==============================================================================
+//  Module: Footer
+//==============================================================================
+
+.footer {
+  padding-bottom: 80px;
+
+  @include respondTo(medium) {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+}
+
+.footer__byline {
+  @include wrapper;
+  @include linkColor($base-link-color, true, false);
+  font-style: normal;
+}
+
+.footer__license {
+  @include wrapper;
+  @include linkColor($base-link-color, true, false);
+}
+
+.footer__social {
+  @include wrapper;
+  @include linkColor($base-link-color, false, false);
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  ul {
+    @extend %resetlist;
+
+    display: inline-block;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 3px;
+    vertical-align: middle;
+  }
+
+  a {
+    border-radius: 100%;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    line-height: 3rem;
+    letter-spacing: 0;
+    text-align: center;
+    background: white;
+
+    @include respondTo(medium) {
+      width: 2.6rem;
+      height: 2.6rem;
+      line-height: 2.6rem;
+    }
+
+    &:hover {
+      color: $key-color-1;
+      background-color: $key-color-2;
+      transition-duration: .6s;
+      transition-property: color, background-color;
+    }
+  }
+
+  $icon: "\f099" "\f16d" "\f0d2" "\f203" "\f09b" "\f09e";
+  $class: twitter instagram pinterest lastfm github feed;
+  $length: length($class);
+
+  @for $i from 1 through $length {
+
+    &--#{nth($class, $i)} {
+      a::before {
+        @extend %icon;
+        display: block;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        content: nth($icon, $i);
+      }
+    }
+  }
+}
+
+.footer__links {
+  @include wrapper;
+  @include linkColor($base-link-color, true, false);
+}

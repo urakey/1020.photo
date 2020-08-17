@@ -1,0 +1,18 @@
+<article class="articleListItem" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <h1 class="articleListItem__title" itemprop="name"><a href="{{ .Permalink }}" itemprop="url">{{ .Title | safeHTML }}</a></h1>
+  <div class="articleListItem__body" itemprop="articleBody">
+    {{ with .Params.photos }}
+      {{ range $index, $element := . }}
+        <p><img class="Lazy" src="/assets/images/eyecatch.png" data-original="{{ . }}" alt="" itemprop="image"></p>
+      {{ end }}
+    {{ end }}
+  </div>
+  <footer class="article__footer assistive" itemprop="articleBody">
+    <ul>
+      <li>
+        <span>Posted on</span>
+        <time datetime="{{ .Date.Format "2006-01-02T00:00:00+09:00" }}" itemprop="datePublished">{{ .Date.Format "January 2, 2006" }}</time>
+      </li>
+    </ul>
+  </footer>
+</article>

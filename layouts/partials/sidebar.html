@@ -1,0 +1,10 @@
+<div class="sidebar">
+  <nav>
+    <h2 class="sidebar__title">Archives</h2>
+    <ul class="sidebar__list">
+      {{ range .Site.Params.archives }}
+        <li><a href="/{{ . }}/">{{ . }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>

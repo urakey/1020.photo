@@ -1,0 +1,21 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main class="main" role="main">
+  <h2 class="main__title">
+    {{ with .Data.Plural }}{{ . }}: {{ end }}
+    {{ with .Title }}{{ . }}{{ else }}Entries{{ end }}
+  </h2>
+  <ul class="articleList">
+    {{ range (.Paginator).Pages }}
+    <li class="articleList__item">
+      {{ .Render "summary" }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</main>
+
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}
+{{ partial "tail.html" . }}

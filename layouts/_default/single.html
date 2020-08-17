@@ -1,0 +1,27 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main class="main" role="main">
+  <article class="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <h1 class="article__title" itemprop="name">{{ .Title | safeHTML }}</h1>
+    <footer class="article__footer assistive">
+      <ul>
+        <li>
+          <span>Posted on</span>
+          <time datetime="{{ .Date.Format "2006-01-02T00:00:00+09:00" }}" itemprop="datePublished">{{ .Date.Format "January 2, 2006" }}</time>
+        </li>
+      </ul>
+    </footer>
+    <div class="article__body" itemprop="articleBody">
+      {{ with .Params.photos }}
+        {{ range $index, $element := . }}
+        <p><img class="Lazy" src="/assets/images/eyecatch.png" data-original="{{ . }}" alt="" itemprop="image"></p>
+        {{ end }}
+      {{ end }}
+    </div>
+  </article>
+</main>
+
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}
+{{ partial "tail.html" . }}
