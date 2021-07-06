@@ -36,7 +36,7 @@
   span::before {
     @extend %icon;
 
-    content: "\f100";
+    content: "\f104";
   }
 }
 
@@ -48,7 +48,7 @@
   span::after {
     @extend %icon;
 
-    content: "\f101";
+    content: "\f105";
   }
 }
 

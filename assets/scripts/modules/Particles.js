@@ -75,17 +75,17 @@ var init = function() {
   }
 
   function createGeometry(count) {
-    var geometry = new THREE.Geometry();
+    var geometry = new THREE.BufferGeometry();
+    var vertices = [];
 
     for (var i = 0; i < count; i++) {
       var x = Math.random() * 1000 - 500;
       var y = Math.random() * 1000 - 500;
       var z = Math.random() * 1000 - 500;
-      var particle = new THREE.Vector3(x, y, z);
-      particle.velocity = new THREE.Vector3(0, -Math.random(), 0);
-      geometry.vertices.push(particle);
+      vertices.push(x, y, z);
     }
 
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
     return geometry;
   }
 

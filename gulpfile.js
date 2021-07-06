@@ -1,5 +1,6 @@
 var gulp            = require('gulp');
 var gulpLoadPlugins = require('gulp-load-plugins');
+var sass            = require('gulp-sass')(require('sass'));
 var browserify      = require('browserify');
 var through2        = require('through2');
 var del             = require('del');
@@ -15,15 +16,9 @@ var PATHS = {
 };
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 9',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.2',
-  'bb >= 10'
+  'last 2 versions',
+  'ie >= 11',
+  'android >= 4'
 ];
 
 // -----------------------------------------------------------------------------
@@ -31,7 +26,7 @@ var AUTOPREFIXER_BROWSERS = [
 gulp.task('sass', function() {
   return gulp.src(PATHS.src + '/**/*.scss')
     .pipe($.plumber())
-    .pipe($.sass({
+    .pipe(sass({
       bundleExec: true,
       errLogToConsole: true,
       outputStyle: 'expanded'
@@ -43,7 +38,7 @@ gulp.task('sass', function() {
 gulp.task('minify:css', function() {
   return gulp.src(PATHS.dest + '/**/*.css')
     .pipe($.plumber())
-    .pipe($.minifyCss())
+    .pipe($.cleanCss())
     .pipe(gulp.dest(PATHS.dest));
 });
 
@@ -143,8 +138,8 @@ gulp.task('copy:js', function() {
 });
 
 gulp.task('copy:fonts', function() {
-  return gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest(PATHS.dest + '/fonts'));
+  return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+    .pipe(gulp.dest(PATHS.dest + '/webfonts'));
 });
 
 gulp.task('clean', function(done) {
