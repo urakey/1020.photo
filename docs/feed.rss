@@ -6,7 +6,16 @@
   <author>Aki Fukayama [akey]</author>
   <description>Photograph by Aki Fukayama [akey].</description>
   <generator uri="https://gohugo.io">Hugo</generator>
-  <lastBuildDate>Thu, 24 Mar 2022 00:00:00 UTC</lastBuildDate>
+  <lastBuildDate>Sun, 27 Mar 2022 00:00:00 UTC</lastBuildDate>
+  
+    <item>
+      <title>March 27, 2022</title>
+      <link>https://1020.photo/2022-03-27/</link>
+      <pubDate>Sun, 27 Mar 2022 00:00:00 UTC</pubDate>
+      <author>Aki Fukayama [akey]</author>
+      <guid>https://1020.photo/2022-03-27/</guid>
+      <description><![CDATA[<figure><img src="https://1020.photo/assets/images/posts/2022/2022-03-27/DSC04713.jpg" alt="" itemprop="image"></figure>]]></description>
+    </item>
   
     <item>
       <title>March 24, 2022</title>
@@ -132,15 +141,6 @@
       <author>Aki Fukayama [akey]</author>
       <guid>https://1020.photo/2021-05-08/</guid>
       <description><![CDATA[<figure><img src="https://1020.photo/assets/images/posts/2021/2021-05-08/DSC03438.jpg" alt="" itemprop="image"></figure>]]></description>
-    </item>
-  
-    <item>
-      <title>April 18, 2021</title>
-      <link>https://1020.photo/2021-04-18/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 UTC</pubDate>
-      <author>Aki Fukayama [akey]</author>
-      <guid>https://1020.photo/2021-04-18/</guid>
-      <description><![CDATA[<figure><img src="https://1020.photo/assets/images/posts/2021/2021-04-18/DSC03245.jpg" alt="" itemprop="image"></figure>]]></description>
     </item>
   
 </channel>
