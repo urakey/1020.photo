@@ -1,5 +1,6 @@
+defaultContentLanguage = 'ja'
+
 Baseurl          = 'https://1020.photo'
-LegalanguageCode = 'ja-JP'
 Title            = '[1020]'
 Publishdir       = 'docs'
 Paginate         = 30
