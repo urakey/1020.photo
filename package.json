@@ -11,7 +11,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-dart-sass": "^1.0.2",
-    "gulp-htmlmin": "^5.0.1",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-imagemin": "^8.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
@@ -32,7 +32,7 @@
     "gulp:build": "gulp buildCss && gulp buildJs && npm run gulp:minify",
     "gulp:minify": "gulp minifyCss & gulp minifyJs & gulp minifyImages & gulp minifyImagesJpegoptim",
     "gulp:format": "npm run gulp:format:html && npm run gulp:format:rss && gulp clean",
-    "gulp:format:html": "gulp replaceHtml && gulp minifyHtml",
+    "gulp:format:html": "gulp replaceHtml && gulp beautifyHtml",
     "gulp:format:rss": "gulp replaceRss && gulp copyRss"
   },
   "repository": {

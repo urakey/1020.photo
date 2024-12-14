@@ -4,7 +4,7 @@ import browserify from 'browserify'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCss from 'gulp-clean-css'
 import dartSass from 'gulp-dart-sass'
-import htmlmin from 'gulp-htmlmin'
+import htmlBeautify from 'gulp-html-beautify'
 import imagemin from 'gulp-imagemin'
 import plumber from 'gulp-plumber'
 import rename from 'gulp-rename'
@@ -79,9 +79,14 @@ export function replaceHtml() {
     .pipe(gulp.dest(PATHS.publishdir));
 }
 
-export function minifyHtml() {
+export function beautifyHtml() {
   return gulp.src(PATHS.publishdir + '/**/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlBeautify({
+      indent_size: 2,
+      indent_char: ' ',
+      max_preserve_newlines: 0,
+      preserve_newlines: false,
+    }))
     .pipe(gulp.dest(PATHS.publishdir));
 }
 

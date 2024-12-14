@@ -1,21 +1,21 @@
-defaultContentLanguage = 'ja'
-
 Baseurl          = 'https://1020.photo'
 Title            = '[1020]'
 Publishdir       = 'docs'
-Paginate         = 30
-
-[Author]
-name = 'Aki Fukayama [akey]'
-url  = 'https://chocolateboard.net/about/'
 
 [Params]
-description = 'Photograph by Aki Fukayama [akey].'
-feed        = '/feed.rss'
-twitter     = 'https://twitter.com/urakey'
-facebook    = 'https://www.facebook.com/urakey'
-instagram   = 'https://www.instagram.com/akey'
-pinterest   = 'https://pinterest.com/urakey'
-lastfm      = 'https://www.last.fm/ja/user/urakey'
-github      = 'https://github.com/urakey'
-archives    = ['2024', '2022', '2021', '2020', '2019']
+  description = 'Photograph by Aki Fukayama [akey].'
+  feed        = '/feed.rss'
+  twitter     = 'https://twitter.com/urakey'
+  facebook    = 'https://www.facebook.com/urakey'
+  instagram   = 'https://www.instagram.com/akey'
+  pinterest   = 'https://pinterest.com/urakey'
+  lastfm      = 'https://www.last.fm/ja/user/urakey'
+  github      = 'https://github.com/urakey'
+  archives    = ['2024', '2022', '2021', '2020', '2019']
+
+[Params.Author]
+  name = 'Aki Fukayama [akey]'
+  url  = 'https://akey.works/about/'
+
+[Pagination]
+  pagerSize = 30
